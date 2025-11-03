@@ -1,0 +1,22 @@
+# Ignorar datos
+datos/
+data/
+*.csv
+*.xlsx
+*.zip
+
+# Ignorar entornos virtuales
+venv/
+.env/
+.env*
+
+# Ignorar cachés de Python
+__pycache__/
+*.pyc
+
+# Ignorar Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Ignorar configuración de IDEs
+.vscode/
+.idea/
