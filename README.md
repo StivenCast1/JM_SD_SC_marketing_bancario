@@ -83,4 +83,5 @@ git commit -m "Proyecto Bank Marketing"
 git push origin main
 
 ## 👨‍💻 Autor
-Sergio Durán, 2025.
+Sergio Durán, Jhonatan Mosquera, Stiven Castrillon
+2025.
