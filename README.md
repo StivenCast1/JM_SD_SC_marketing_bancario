@@ -14,29 +14,25 @@ El objetivo es **predecir si un cliente aceptará una suscripción a un depósit
   - **Label Encoding**
   - Reducción opcional de dimensionalidad (PCA)
 - Entrenar y comparar al menos **2 modelos de Machine Learning**.
-- Construir una **app interactiva** con **Streamlit**.
 - Versionar el proyecto en **GitHub**.
-- (Opcional) Cargar los datos directamente desde **OneDrive**.
+
+- Carga de los datos directamente desde **Drive**.
 
 ## 🧱 Estructura del Proyecto
 
-bank-marketing-ml/
+JM_SD_SC_MARKETING_BANCARIO
 │
 ├─ datos/
-│   └─                        # Datos originales (si se descargan localmente)
+│   └─ # Datos originales en drive (si se descargan localmente)
 │
 ├─ notebooks/
-│   └─ Descarga_datos.ipynb           # Exploración de datos con Plotly
-│   └─ Exploracion_datos.ipynb           # Exploración de datos con Plotly
+│   └─ 01_descarga_datos.ipynb          Lectura inicial de los datos
+│   └─ 02_exploracion_datos.ipynb       Exploración y ajuste de los datos
+│   └─ 03_automl_flaml.ipynb            Comparativo de modelos (exploración modelos)
+│   └─ 04_entrenamiento_modelo.ipynb    Entrenamiento, selección y guardado de Modelo lightgbm 
 │
-├─ src/
-│   ├─ data.py                # Carga de datos (local u OneDrive)
-│   ├─ models.py              # Pipelines y ColumnTransformer
-│   ├─ train.py               # Entrenamiento y evaluación de modelos
-│   └─ app.py                 # Aplicación Streamlit
+├
 │
-├─ reports/
-│   └─ figures/               # Gráficos generados en el EDA
 │
 ├─ requirements.txt
 └─ README.md
@@ -56,23 +52,16 @@ pip install -r requirements.txt
 ## 📥 Carga de Datos
 
 ### ✅ Opción 1: Archivo Local
-Coloca el archivo bank-full.csv en:
-data/raw/bank-full.csv
-
-Y cárgalo:
-df = pd.read_csv("data/raw/bank-full.csv", sep=';')
-
-### 🌐 Opción 2: Desde OneDrive (Enlace Público)
-df = pd.read_excel("https://1drv.ms/xxxxx?download=1")
+Se lee el archivo de la siguiente ruta de Drive:
+https://drive.google.com/file/d/1sfd6TnOHhrCq0I1TusC9HoRwgTtXohFr/view?usp=drive_link
 
 ## 🔍 EDA
-Abrir notebooks/01_eda.ipynb para análisis visual.
+Abrir notebooks/02_exploracion_datos.ipynb para análisis visual.
 
 ## 🧩 Entrenamiento
-python src/train.py
+Notebooks/04_entrenamiento_modelo.ipynb
 
-## 🎛️ Aplicación Streamlit
-streamlit run src/app.py
+
 
 ## 🧠 Nota Importante
 Se elimina la variable `duration` para evitar fuga de información.
